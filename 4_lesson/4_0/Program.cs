@@ -13,8 +13,8 @@ int SumNums(int num)
 
 Console.WriteLine(SumNums(int.Parse(Console.ReadLine())));
 
-int i = 0;
+//int i = 0;
 
-i++;
-i += 1;
-i = i + 1;
+//i++;
+//i += 1;
+//i = i + 1;
