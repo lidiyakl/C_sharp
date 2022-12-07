@@ -3,10 +3,10 @@
 
 int Step(int a, int b)
 {
-    int avb=1;
-    for(int i=0; i<b; i++)
+    int avb = 1;
+    for (int i = 0; i < b; i++)
     {
-        avb = avb*a;
+        avb = avb * a;
     }
 
     return avb;
@@ -17,4 +17,4 @@ int A = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите число B");
 int B = int.Parse(Console.ReadLine());
 
-Console.WriteLine(Step(A,B));
+Console.WriteLine(Step(A, B));
