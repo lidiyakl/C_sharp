@@ -3,15 +3,15 @@
 
 void Fibonacci(int num)
 {
-    int a=0,b=1;
-    
-    for (int i=0;i<num;i++)
+    int a = 0, b = 1;
+
+    for (int i = 0; i < num; i++)
     {
         Console.Write($"{a} ");
-        (a,b)=(b,a+b);
+        (a, b) = (b, a + b);
     }
     Console.WriteLine();
 }
 
-int num=int.Parse(Console.ReadLine());
+int num = int.Parse(Console.ReadLine());
 Fibonacci(num);
