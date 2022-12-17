@@ -26,10 +26,15 @@ int[,] MassNums(int row, int column, int from, int to)
 
 int Sum(int[,] arr)
 {
-    int summ=0;
+    int summ = 0;
     int row = arr.GetLength(0);
-    for(int i = 0; i < row; i++)
-        summ+=arr[i,i];
+    int column = arr.GetLength(1);
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+            if(i==j)
+                summ += arr[i, i];
+    }
     return summ;
 }
 
