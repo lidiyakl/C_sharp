@@ -26,13 +26,16 @@ int[,] MassNums(int row, int column, int from, int to)
 
 int[,] Proiz(int[,] arr, int[,] arr1)
 {
-    int row=arr.GetLength(0);
-    int column = arr1.GetLength(1);
-    int[,] arr2=new int[row,column]
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
+    int[,] arr_new = new int[row, column];
 
-    for(int i = 0; i < row; i++)
+    if (row != arr1.GetLength(0) || column != arr1.GetLength(1)) return arr_new;
+
+    for (int i = 0; i < row; i++)
         for (int j = 0; j < column; j++)
-            arr2[i,j]=arr[i,j]*arr1[j,i]
+            arr_new[i, j] = arr[i, j] * arr1[i, j];
+    return arr_new;
 }
 
 Console.Write("Enter the number of rows: ");
@@ -52,3 +55,4 @@ int[,] arr_2 = MassNums(row1, column1,
                        int.Parse(Console.ReadLine()),
                        int.Parse(Console.ReadLine()));
 Print(arr_2);
+Print(Proiz(arr_1, arr_2));
